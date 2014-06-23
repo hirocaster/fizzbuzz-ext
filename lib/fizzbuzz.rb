@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 class FizzBuzz
   def say number
     return 'FizzBuzz' if (fizz? number) && (buzz? number)
@@ -16,3 +18,11 @@ class FizzBuzz
     (number % 5) == 0
   end
 end
+
+def fizzbuzz
+  1.upto(100) do |number|
+    puts FizzBuzz.new.say number
+  end
+end
+
+fizzbuzz
