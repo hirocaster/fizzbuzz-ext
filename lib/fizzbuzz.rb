@@ -1,5 +1,5 @@
 class FizzBuzz
   def say number
-    1
+    number
   end
 end
