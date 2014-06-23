@@ -25,5 +25,13 @@ describe 'FizzBuzz' do
         expect(fizzbuzz.say 10).to eq 'Buzz'
       end
     end
+
+    context 'args divisible by three and five' do
+      it 'return FizzBuzz' do
+        expect(fizzbuzz.say 15).to eq 'FizzBuzz'
+        expect(fizzbuzz.say 30).to eq 'FizzBuzz'
+        expect(fizzbuzz.say 45).to eq 'FizzBuzz'
+      end
+    end
   end
 end
