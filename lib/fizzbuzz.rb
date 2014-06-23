@@ -22,4 +22,4 @@ def fizzbuzz(format)
   end
 end
 
-fizzbuzz({3 => 'Fizz', 5 => 'Buzz'})
+fizzbuzz({3 => 'Foo', 7 => 'Bar', 11 => 'Baz'})
