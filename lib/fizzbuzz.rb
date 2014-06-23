@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 class FizzBuzz
-  def say(number, format = {3 => 'Fizz', 5 => 'Buzz'})
+  def say(number, format)
     result = ''
 
     format.each do |key, value|
@@ -16,10 +16,10 @@ class FizzBuzz
   end
 end
 
-def fizzbuzz
+def fizzbuzz(format)
   1.upto(100) do |number|
-    puts FizzBuzz.new.say number
+    puts FizzBuzz.new.say number, format
   end
 end
 
-fizzbuzz
+fizzbuzz({3 => 'Fizz', 5 => 'Buzz'})
