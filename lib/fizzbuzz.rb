@@ -1,21 +1,18 @@
 #!/usr/bin/env ruby
 
 class FizzBuzz
-  def say number
-    return 'FizzBuzz' if (fizz? number) && (buzz? number)
-    return 'Fizz' if fizz? number
-    return 'Buzz' if buzz? number
-    number
-  end
+  def say(number, format = {3 => 'Fizz', 5 => 'Buzz'})
+    result = ''
 
-  private
+    format.each do |key, value|
+      result += value.to_s if (number % key) == 0
+    end
 
-  def fizz? number
-    (number % 3) == 0
-  end
-
-  def buzz? number
-    (number % 5) == 0
+    if result == ''
+      number
+    else
+      result
+    end
   end
 end
 
