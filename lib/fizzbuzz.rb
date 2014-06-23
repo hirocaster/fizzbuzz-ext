@@ -1,6 +1,7 @@
 class FizzBuzz
   def say number
     return 'Fizz' if fizz? number
+    return 'Buzz' if buzz? number
     number
   end
 
@@ -8,5 +9,9 @@ class FizzBuzz
 
   def fizz? number
     (number % 3) == 0
+  end
+
+  def buzz? number
+    (number % 5) == 0
   end
 end
