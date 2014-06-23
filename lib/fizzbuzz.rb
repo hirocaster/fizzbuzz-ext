@@ -1,5 +1,6 @@
 class FizzBuzz
   def say number
+    return 'FizzBuzz' if (fizz? number) && (buzz? number)
     return 'Fizz' if fizz? number
     return 'Buzz' if buzz? number
     number
